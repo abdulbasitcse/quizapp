@@ -7,7 +7,7 @@ const adminController = require('../controllers/adminController');
 const auth = require("../middleware/auth");
 
 router.get('/', (req, res) => {
-    res.send('Hello WORlD')
+    res.send('Welcome to Quiz App')
 })
 
 router.post("/welcome", auth, (req, res) => {
