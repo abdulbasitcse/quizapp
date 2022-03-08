@@ -29,7 +29,6 @@ exports.postSignup = (req, res, next) => {
             process.env.TOKEN_KEY,
             { expiresIn: "2h" }
           )
-
           //save user token
           user.token = token
           res.status(201).send({ user, "msg": "successfully inserted" });
