@@ -1,0 +1,12 @@
+{"v":0,"level":30,"name":"newrelic","hostname":"ip-172-31-16-128","pid":72725,"time":"2022-03-09T21:34:10.941Z","msg":"Using New Relic for Node.js. Agent version: 8.8.0; Node version: v14.19.0."}
+{"v":0,"level":30,"name":"newrelic","hostname":"ip-172-31-16-128","pid":72725,"time":"2022-03-09T21:34:11.200Z","msg":"Using LegacyContextManager"}
+{"v":0,"level":40,"name":"newrelic","hostname":"ip-172-31-16-128","pid":72725,"time":"2022-03-09T21:34:11.377Z","msg":"The newrelic module must be the first module required.\nThe following modules were required before newrelic and are not being instrumented:\n\tmongodb: /home/ubuntu/quizapp/node_modules/mongodb/lib/index.js"}
+{"v":0,"level":30,"name":"newrelic","hostname":"ip-172-31-16-128","pid":72725,"time":"2022-03-09T21:34:11.377Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"ip-172-31-16-128","pid":72725,"time":"2022-03-09T21:34:11.389Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"ip-172-31-16-128","pid":72725,"time":"2022-03-09T21:34:11.389Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"ip-172-31-16-128","pid":72725,"time":"2022-03-09T21:34:12.624Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"ip-172-31-16-128","pid":72725,"time":"2022-03-09T21:34:12.624Z","msg":"Connected to collector-003.newrelic.com:443 with agent run ID BTolzbapl-HUADSC10E5m09iKR3AAAgBAAAnIQEAARwVAgRBOZZyAwAFOC44LjAAEGlwLTE3Mi0zMS0xNi0xMjgAB1F1aXphcHA.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"ip-172-31-16-128","pid":72725,"time":"2022-03-09T21:34:12.624Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3441367/applications/1094293106","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"ip-172-31-16-128","pid":72725,"time":"2022-03-09T21:34:12.626Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"log_event_data\":833,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"ip-172-31-16-128","pid":72725,"time":"2022-03-09T21:34:12.629Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"ip-172-31-16-128","pid":72725,"time":"2022-03-09T21:34:13.629Z","msg":"Starting initial 1000ms harvest."}
