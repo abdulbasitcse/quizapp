@@ -28,7 +28,6 @@ exports.getAllusers = (req, res) => {
 }
   
   
-
 exports.user = (req, res, next) => {
     const email = req.params.email;
     User.findOne({ email: email }, (err, result) => {
