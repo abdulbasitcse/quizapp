@@ -12,7 +12,7 @@ exports.postSignup = (req, res, next) => {
     const password = req.body.password;
     const confirmPassword = req.body.confirmPassword;
     if (!(email && password)) {
-      res.status(400).send("All input is requred")
+      res.status(400).send("All input is required")
     }
     //check is user already exist
     //Validate if user exist in our database
@@ -36,7 +36,7 @@ exports.postSignup = (req, res, next) => {
             )
             //save user token
             user.token = token
-            res.status(201).send({ "msg": "successfully Registerd", user });
+            res.status(201).send({ "msg": "successfully Registered", user });
           })
 
       })
@@ -58,7 +58,7 @@ exports.postLogin = async (req, res, next) => {
     const user = User.findOne({ email: email })
       .then(result => {
         if (!result) {
-          return res.send({ "msg": "User Already Exist. Please Signup" });
+          return res.send({ "msg": "User doesn't Exist. Please Signup" });
         }
         return (bcrypt.compare(password, result.password))
           .then(doMatch => {
