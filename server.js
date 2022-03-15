@@ -35,10 +35,12 @@ const express = require('express')
 const app = express()
 //const mongoose = require('mongoose')
 const routes = require('./routes/routes') // includes the routes.js file
-const dotenv = require('dotenv')
+//const dotenv = require('dotenv')
 const connectDB = require('./database/connection')
 
-dotenv.config({path:'config.env'})
+//dotenv.config({path:'config.env'})
+require('dotenv').config()
+
 const PORT = process.env.PORT || 8080
 const hostname = process.env.hostname
 
