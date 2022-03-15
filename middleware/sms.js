@@ -24,8 +24,8 @@ client.messages
     "to": "+919716316160"
     })
   .then(message => 
-    console.log(message))
-    res.status(200).send("Message Successfully sent")
+    console.log(message.body))
+    //res.status(200).send("Message Successfully sent")
 .catch((error) => {
     console.error(error)
     return res.status(401).send("Some error")

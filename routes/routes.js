@@ -5,6 +5,7 @@ const authController = require('../controllers/auth');
 const adminController = require('../controllers/adminController');
 
 const auth = require("../middleware/auth");
+const sms = require("../middleware/sms");
 
 router.get('/', (req, res) => {
     res.send('Welcome to Quiz App')
@@ -15,7 +16,7 @@ router.post("/welcome", auth, (req, res) => {
   });
 
 
-router.post('/signup', authController.postSignup)
+router.post('/signup', authController.postSignup,sms)
 router.post('/login', authController.postLogin)
 
 router.get('/users', adminController.getAllUsers)
