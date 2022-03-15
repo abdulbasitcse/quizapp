@@ -12,7 +12,7 @@ exports.postSignup = (req, res, next) => {
     const password = req.body.password;
     const confirmPassword = req.body.confirmPassword;
     if (!(email && password)) {
-      res.status(400).send("All input is required")
+      return res.status(400).send("All input is required")
     }
     //check is user already exist
     //Validate if user exist in our database
@@ -21,7 +21,7 @@ exports.postSignup = (req, res, next) => {
         if (result) {
           return res.send({ "msg": "User Already Exist. Please Login" });
         }
-        return bcrypt.hash(password, 12) //Encrypt user password
+       return bcrypt.hash(password, 12) //Encrypt user password
           .then(hashedPassword => {
             const user = new User({ // Create user in our database
               email: email.toLowerCase(), //sanitize : convert email to lowercase
@@ -36,7 +36,7 @@ exports.postSignup = (req, res, next) => {
             )
             //save user token
             user.token = token
-            res.status(201).send({ "msg": "successfully Registered", user });
+            return res.status(201).send({ "msg": "successfully Registered", user });
           })
 
       })
@@ -72,7 +72,7 @@ exports.postLogin = async (req, res, next) => {
               result.token = token
               return res.status(200).send({ "msg": "Login successfully", result })
             }
-            res.status(400).send({ "msg": "Incorrect Credentials" })
+            return res.status(400).send({ "msg": "Incorrect Credentials" })
           })
       })
   } catch (err) {
