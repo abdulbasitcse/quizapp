@@ -7,8 +7,8 @@ const axios = require("axios");
 const Redis = require("ioredis");
 const redis = new Redis();
 
-exports.getAllusers = (req, res) => {
-    const users = req.params.users;
+exports.getAllUsers = (req, res) => {
+    //const users = req.params.users;
     redis.get("searchtext", async(error, result) => {
         if (error) throw error;
         if (result !== null) {
@@ -45,7 +45,7 @@ exports.deleteUser = (req, res, next) => {
     var email = req.params.email
     User.deleteOne({ email: email }, (err, result) => {
         if (err) {
-            //return res.status(404).json({ msg: "Somthing went wrong!!" });
+            //return res.status(404).json({ msg: "Something went wrong!!" });
             return res.status(404).send(err);
 
         }
@@ -96,7 +96,7 @@ exports.addQuestion = (req, res) => {
                 question.save((err, result) => {
                     if (err) {
                         console.log(err);
-                        res.status(500).json({ msg: "some error! occured while creating" });
+                        res.status(500).json({ msg: "some error! occurred while creating" });
                     }
                     else {
                         //res.status(200).json({ message: "yes question added!!" })
@@ -125,7 +125,7 @@ exports.deleteQuestion = (req, res) => {
     var id = req.params.id
     Question.deleteOne({ _id: id }, (err, result) => {
         if (err) {
-            //return res.status(404).json({ msg: "Somthing went wrong!!" });
+            //return res.status(404).json({ msg: "Something went wrong!!" });
             return res.status(404).send(err);
 
         }

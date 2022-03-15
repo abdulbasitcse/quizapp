@@ -18,7 +18,7 @@ router.post("/welcome", auth, (req, res) => {
 router.post('/signup', authController.postSignup)
 router.post('/login', authController.postLogin)
 
-router.get('/users', adminController.getAllusers)
+router.get('/users', adminController.getAllUsers)
 
 router.get('/users/:email', adminController.user);
 router.delete('/users/:email', adminController.deleteUser)
