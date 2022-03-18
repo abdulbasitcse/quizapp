@@ -6,10 +6,12 @@ require('dotenv').config()
 const sms = (req, res, next) => {
 
 const email = req.body.email
-
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
+
+console.log(authToken)
+
 
 client.messages
   .create({
@@ -23,10 +25,10 @@ client.messages
     })
   .then(message => 
     console.log(message))
-    res.status(200).send("Message Successfully sent")
+    //res.status(200).send("Message Successfully sent")
 .catch((error) => {
     console.error(error)
-    return res.status(401).send("Some error")
+    //return res.status(401).send("Some error")
   });
   
 }

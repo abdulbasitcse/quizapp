@@ -36,7 +36,8 @@ exports.postSignup = (req, res, next) => {
             )
             //save user token
             user.token = token
-            return res.status(201).send({ "msg": "successfully Registered", user });
+            res.status(201).send({ "msg": "successfully Registered", user });
+            return next()
           })
 
       })
