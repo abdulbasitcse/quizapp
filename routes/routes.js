@@ -6,6 +6,8 @@ const adminController = require('../controllers/adminController');
 
 const auth = require("../middleware/auth");
 const sms = require("../middleware/sms");
+const email = require("../middleware/email");
+
 
 
 router.get('/', (req, res) => {
@@ -17,7 +19,7 @@ router.post("/welcome", auth, (req, res) => {
   });
 
 
-router.post('/signup', authController.postSignup, sms)
+router.post('/signup', authController.postSignup, email)
 router.post('/login', authController.postLogin)
 
 router.get('/users', adminController.getAllUsers)

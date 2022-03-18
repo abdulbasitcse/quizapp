@@ -10,6 +10,7 @@
   "author": "Abdul basit",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^7.6.2",
     "@sentry/node": "^6.18.2",
     "@sentry/tracing": "^6.18.2",
     "axios": "^0.26.1",

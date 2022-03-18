@@ -10,9 +10,6 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 
-console.log(authToken)
-
-
 client.messages
   .create({
     "body": `Hi ! You have successfully Registered with email: ${email} `,
@@ -24,13 +21,13 @@ client.messages
     "to": "+919716316160"
     })
   .then(message => 
-    console.log(message))
+    console.log('message sent'))
     //res.status(200).send("Message Successfully sent")
 .catch((error) => {
     console.error(error)
     //return res.status(401).send("Some error")
   });
-  
+  //return next()
 }
 
 module.exports = sms
